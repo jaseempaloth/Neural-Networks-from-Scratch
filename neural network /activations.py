@@ -100,6 +100,7 @@ def selu(x):
     Scaled Exponential Linear Unit function, f(x) = α * x if x > 0, else α * (e^x - 1)
     SELU is used for hidden layers
     """
+    alpha = 1.6732632423543772848170429916717
     return np.where(x > 0, x, alpha * (np.exp(x) - 1))
 
 def selu_derivative(x):
